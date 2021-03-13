@@ -11,7 +11,7 @@
     ```
 * Check instance status
     ```
-    aws ec2 describe-instances --instance-ids instanceId --filters Name=instance-state-name,Values=stopped,running --query "Reservations[*].Instances[*].[InstanceId, State.Name]" --output table
+    aws ec2 describe-instances --instance-ids i-04941ac1e3a4f967f --filters Name=instance-state-name,Values=stopped,running --query "Reservations[*].Instances[*].[InstanceId, State.Name, PublicDnsName]" --output table
     ```
 * Connect to the instance
     ```
